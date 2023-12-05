@@ -3,6 +3,7 @@
 
 main.page {
   width: 80vw;
+  overflow: hidden;
 
   @include media-mx(1200) {
     width: 100%;
