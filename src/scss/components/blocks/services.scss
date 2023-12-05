@@ -1,0 +1,154 @@
+.services {
+  display: flex;
+
+
+
+  &__block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 62%;
+  }
+
+  &__box {
+    position: relative;
+    height: rem(323);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.active {}
+
+    &:hover {
+      .services__box-image::before {
+        opacity: 0.5;
+      }
+
+      .services__box-title::before {
+        width: rem(80);
+        left: 0%;
+        right: 0%;
+      }
+    }
+  }
+
+  &__box-image {
+    &::before {
+      content: "";
+      opacity: 0.9;
+      background: #050505;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transition: all 0.5s;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__box-title {
+    position: absolute;
+    z-index: 1;
+    color: #FFF;
+    text-align: center;
+    font-family: Bebas Neue;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: rem(3);
+      width: rem(0);
+      background: #FFF;
+      bottom: rem(-5);
+      left: 50%;
+      right: 50%;
+      margin: 0 auto;
+      transition: all 0.5s;
+    }
+
+    .active & {
+      &::before {
+        width: rem(80);
+        left: 0%;
+        right: 0%;
+      }
+    }
+
+  }
+
+  &__box-info {
+    display: none;
+  }
+
+  &__info {
+    width: 38%;
+    padding: rem(120) rem(65) rem(75) rem(70);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__info-content {}
+
+  &__info-price {
+    color: #FFF;
+    font-family: Bebas Neue;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    opacity: 0.5;
+  }
+
+  &__info-title {
+    margin-top: rem(10);
+    color: #FFF;
+    font-family: Bebas Neue;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+  }
+
+  &__info-excerpt {
+    margin-top: rem(27);
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+  }
+
+  &__info-list {
+    margin-top: rem(50);
+    padding-left: rem(20);
+  }
+
+  &__info-item {
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 46px;
+    list-style: disc;
+  }
+
+  &__info-btn {
+    display: flex;
+    width: fit-content;
+  }
+}

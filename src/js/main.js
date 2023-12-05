@@ -16,6 +16,7 @@ import BurgerMenu from './modules/BurgerMenu';
 import contacForm from './scripts/contactForm';
 import heroBlock from './scripts/heroBlock';
 import portfolioSection from './scripts/portfolioSection';
+import servicesSection from './scripts/servicesSection';
 // import Tabs from './modules/Tabs';
 // import Accordion from './modules/Accordion';
 
@@ -45,4 +46,8 @@ if (contactFormBlock) {
 const portfolioBlock = document.querySelector('.portfolio');
 if (portfolioBlock) {
 	portfolioSection(portfolioBlock);
+}
+const services = document.querySelector('.services');
+if (services) {
+	servicesSection(services);
 }
