@@ -1,0 +1,69 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+
+main.page {
+  width: 80vw;
+
+  @include media-mx(1200) {
+    width: 100%;
+  }
+}
+
+.main__btn {
+  border: 1px solid #FFF;
+  padding: rem(22)rem(40);
+  color: #FFF;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: all 0.5s;
+  text-transform: uppercase;
+
+  &:hover {
+    background: #FFF;
+    color: #121213;
+  }
+}
+
+.d-none {
+  display: none;
+}
+
+.section {
+  &__title {
+    color: #FFF;
+    font-family: Bebas Neue;
+    font-size: rem(30);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    opacity: 0.5;
+  }
+
+  &__subtitle {
+    margin-top: rem(10);
+    color: #FFF;
+    font-family: Bebas Neue;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Убираем внутренние рамки в Firefox */
+input:-moz-autofill {
+  box-shadow: 0 0 0 1000px white inset !important;
+}

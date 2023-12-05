@@ -1,0 +1,251 @@
+.header {
+  width: 20vw;
+  min-width: rem(250);
+  transition: all var(--bs-transition);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: rem(40) rem(40) rem(70) 6.25vw;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+
+  @include media-mx(1200) {
+    width: 100%;
+    min-height: auto;
+    flex-direction: row;
+    position: fixed;
+    align-items: center;
+    padding: rem(40) rem(20) rem(10);
+    justify-content: center;
+    height: auto;
+
+    .touch & {
+      min-height: auto;
+    }
+
+    .header-is-sticky & {
+      background: #121213;
+      padding: rem(15) rem(20);
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: rem(11);
+    color: #FFF;
+    font-family: Bebas Neue;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__menu {
+    .empty {
+      display: none;
+    }
+
+    @include media-mx(1200) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      padding: rem(40) rem(40) rem(70);
+      background: #121213;
+
+      .empty {
+        display: block;
+      }
+
+      transform: translateX(-100%);
+      transition: all 0.5s;
+
+      .menu-open & {
+
+
+        transform: translateX(0);
+      }
+    }
+
+    .menu {
+      &__list {
+        display: flex;
+        flex-direction: column;
+        gap: rem(30);
+
+        @include media-mx(1200) {
+          margin-left: rem(-100);
+        }
+      }
+
+      &__item {}
+
+      &__link {
+        color: #FFF;
+        font-family: Bebas Neue;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        transition: all 0.5s;
+        letter-spacing: 0.9px;
+        text-transform: uppercase;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          opacity: 0.6;
+
+          &::before {
+            width: 5.50vw;
+          }
+        }
+
+        &::before {
+          display: flex;
+          content: "";
+          position: absolute;
+          right: calc(100% + 1.25vw);
+          height: 1px;
+          width: 0;
+          background: #FFF;
+          transform: translateY(-200%);
+          transition: all 0.5s;
+        }
+      }
+
+      &__contacts {
+        display: none;
+
+        @include media-mx(1200) {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: rem(25);
+
+    @include media-mx(1200) {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    @include media-mx(1200) {
+      display: none;
+    }
+  }
+
+  &__contacts-socials {
+    display: flex;
+    gap: rem(15);
+  }
+
+  &__contact-social {
+    height: rem(20);
+    width: auto;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__contacts-phone {
+    color: #FFF;
+    font-family: Bebas Neue;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+
+
+
+// Burger
+
+.icon-menu {
+  display: none;
+  border: none;
+  background: none;
+
+  @include media-mx(1200) {
+    display: block;
+    position: absolute;
+    right: rem(20);
+    width: rem(30);
+    height: rem(18);
+    cursor: pointer;
+    z-index: 5;
+
+    span,
+    &::before,
+    &::after {
+      content: "";
+      transition: all 300ms ease 0ms;
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: rem(2);
+      background-color: #fff;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+    span {
+      top: calc(50% - rem(1));
+    }
+
+    .menu-open & {
+      span {
+        width: 0;
+      }
+
+      &::before {
+        top: calc(50% - rem(1));
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        bottom: calc(50% - rem(1));
+        transform: rotate(45deg);
+      }
+    }
+  }
+}

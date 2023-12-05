@@ -1,0 +1,259 @@
+.contacts {
+  display: flex;
+  position: relative;
+
+  @include media-mx(992) {
+    flex-wrap: wrap;
+  }
+
+  &__wrapper {
+    position: relative;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 12.3vh rem(70) rem(190);
+
+    @include media-mx(1200) {
+      padding-top: rem(120);
+      padding-bottom: rem(200);
+    }
+
+    @include media-mx(992) {
+      position: static;
+      width: 100%;
+      padding-bottom: rem(100);
+    }
+
+    @include media-mx(600) {
+      padding: rem(130) rem(20) rem(100);
+    }
+  }
+
+  &__background {}
+
+  &__title {}
+
+  &__subtitle {}
+
+  &__block {
+    margin-top: 11vh;
+
+    &.active {
+      .success {
+        display: block;
+      }
+    }
+
+    .success {
+      display: none;
+
+      h3 {
+        text-align: center;
+        display: block;
+      }
+    }
+  }
+
+  &__block-title {
+    color: #FFF;
+    font-family: Bebas Neue;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    .active & {
+      display: none;
+    }
+  }
+
+  &__block-text {
+    margin-top: rem(2);
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    opacity: 0.5;
+
+    .active & {
+      display: none;
+    }
+  }
+
+  &__form {
+    max-width: rem(300);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: rem(45);
+    margin-top: rem(45);
+    position: relative;
+
+    @include media-mx(600) {
+      max-width: 100%;
+    }
+
+    .active & {
+      display: none;
+
+    }
+
+
+    .spinner {
+      display: none;
+
+      &.active {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+
+  &__form-box {}
+
+  // &__form-label {}
+
+  &__form-input {
+    border: none;
+    background: none;
+    width: 100%;
+    padding: rem(8) 0;
+    border-bottom: 1px solid #C4C4C4;
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    &::placeholder {
+      color: #FFF;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      opacity: 0.5;
+    }
+
+    &:-webkit-autofill {
+      -webkit-text-fill-color: #FFF !important;
+      color: #FFF !important;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+
+      &::before {
+        content: '';
+        /* Обязательно добавьте content для создания псевдоэлемента */
+        display: block;
+        box-sizing: border-box;
+        background-color: transparent;
+        /* Цвет фона */
+      }
+    }
+
+    &:-webkit-autofill {}
+  }
+
+  &__form-submit {
+    background: none;
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__footer {
+    background: #0D0D0E;
+    padding: rem(55) rem(70);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: rem(20);
+    width: 100%;
+
+    @include media-mx(1200) {
+      padding: rem(30) rem(20);
+    }
+
+    @include media-mx(992) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__footer-block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__footer-phone {
+    color: #FFF;
+    font-family: Bebas Neue;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin-bottom: rem(4);
+    transition: all 0.5s;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &__footer-email {
+    color: #FFF;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transition: all 0.5s;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &__footer-address {
+    max-width: rem(250);
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 176.187%;
+    opacity: 0.5;
+
+    @include media-mx(992) {
+      text-align: center;
+    }
+  }
+
+  &__card {
+    width: 50%;
+
+    @include media-mx(992) {
+      width: 100%;
+    }
+  }
+
+  &__card-image {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+  }
+}
