@@ -15,6 +15,7 @@ import BaseHelpers from './helpers/BaseHelpers';
 import BurgerMenu from './modules/BurgerMenu';
 import contacForm from './scripts/contactForm';
 import heroBlock from './scripts/heroBlock';
+import portfolioSection from './scripts/portfolioSection';
 // import Tabs from './modules/Tabs';
 // import Accordion from './modules/Accordion';
 
@@ -40,4 +41,8 @@ if (heroBlocks) {
 const contactFormBlock = document.querySelector('.contacts__block');
 if (contactFormBlock) {
 	contacForm(contactFormBlock);
+}
+const portfolioBlock = document.querySelector('.portfolio');
+if (portfolioBlock) {
+	portfolioSection(portfolioBlock);
 }

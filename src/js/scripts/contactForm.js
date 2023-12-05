@@ -5,23 +5,23 @@ function contacForm(contactFormBlock) {
     e.preventDefault();
     sendData();
   });
+
   function sendData() {
     spinner.classList.add('active');
     const formData = new FormData(form);
-    fetch('https://formsubmit.co/ajax/chopikvitali@yandex.by', {
+    fetch('https://formsubmit.co/web-divindstudio@yandex.by', {
       method: 'POST',
       body: formData,
+      mode: 'no-cors'
     })
-      .then(response => response.text())
-      .then(data => {
+      .then(() => {
         spinner.classList.remove('active');
         contactFormBlock.classList.add('active');
       })
       .catch(error => {
         console.error('Error sending data:', error);
       });
-
   }
-
 }
+
 export default contacForm;
