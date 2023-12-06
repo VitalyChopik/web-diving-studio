@@ -21,6 +21,7 @@
     padding: rem(40) rem(20) rem(10);
     justify-content: center;
     height: auto;
+    transition: all 0.5s !important;
 
     .touch & {
       min-height: auto;

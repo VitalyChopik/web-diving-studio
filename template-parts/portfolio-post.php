@@ -6,7 +6,8 @@
     <?php
       $terms = get_the_terms(get_the_ID(), 'type-website');
       if ($terms) {
-          echo '<h3 class="portfolio__box-caterory"><a href="' . esc_url(get_term_link($terms[0]->term_id)) . '">' . esc_html($terms[0]->name) . '</a></h3>';
+        // echo '<h3 class="portfolio__box-caterory"><a href="' . esc_url(get_term_link($terms[0]->term_id)) . '">' . esc_html($terms[0]->name) . '</a></h3>';
+          echo '<h3 class="portfolio__box-caterory"><a>' . esc_html($terms[0]->name) . '</a></h3>';
       }
     ?>
     <h2 class="portfolio__box-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
