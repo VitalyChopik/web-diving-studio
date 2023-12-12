@@ -35,6 +35,12 @@ function my_register_blocks() {
             'render_callback'   => 'my_acf_block_render_callback',
             'category'          => 'layout',
         ));
+        acf_register_block_type(array(
+            'name'            => 'cards',
+            'title'             => __('Cards'),
+            'render_callback'   => 'my_acf_block_render_callback',
+            'category'          => 'layout',
+        ));
     }
 }
 
