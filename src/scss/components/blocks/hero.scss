@@ -19,7 +19,7 @@
   &__heading {}
 
   &__title {
-    color: rgba($color: #FFF, $alpha: 0.6);
+    color: rgba($color: #FFF, $alpha: 1);
     font-family: Bebas Neue;
     font-size: 7.3vw;
     font-style: normal;
@@ -27,7 +27,6 @@
     line-height: normal;
     letter-spacing: 7px;
     text-transform: uppercase;
-    opacity: 0.6;
 
     @include media-mx(1100) {
       text-align: center;
@@ -86,7 +85,7 @@
     line-height: 1;
     letter-spacing: 4.25px;
     text-transform: uppercase;
-    margin-bottom: rem(-20);
+    margin-bottom: rem(-10);
     margin-left: rem(-8);
 
     @include media-mx(600) {

@@ -1,6 +1,6 @@
 
 
-<article class="portfolio__box" data-fullscreen>
+<article class="portfolio__box">
   <?php the_post_thumbnail( 'full', ['class'=>'portfolio__box-img'] )?>
   <div class="portfolio__box-text">
     <?php
@@ -12,4 +12,5 @@
     ?>
     <h2 class="portfolio__box-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
   </div>
+  <a href="<?php the_permalink();?>" class="portfolio__box-link"></a>
 </article>
