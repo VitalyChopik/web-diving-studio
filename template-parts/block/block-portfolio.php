@@ -80,7 +80,7 @@
       </svg>
     </div>
     <?php
-      $posts_per_page = 6;
+      $posts_per_page = -1;
       // Custom query to retrieve the 15 latest posts
       $args = array(
           'post_type' => 'portfolio',          // Specify post type

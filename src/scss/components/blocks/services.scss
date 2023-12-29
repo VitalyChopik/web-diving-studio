@@ -131,6 +131,10 @@
         transform: translateX(0);
       }
     }
+
+    @include media-mx(1400) {
+      padding: rem(80) rem(40) rem(60) rem(45);
+    }
   }
 
   &__info-close {
@@ -193,7 +197,11 @@
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 30px;
+    line-height: 2;
+
+    @include media-mx(1400) {
+      font-size: rem(14);
+    }
   }
 
   &__info-list {
@@ -209,6 +217,10 @@
     line-height: 1.25;
     list-style: disc;
     margin-bottom: rem(15);
+
+    @include media-mx(1400) {
+      font-size: rem(14);
+    }
   }
 
   &__info-btn {

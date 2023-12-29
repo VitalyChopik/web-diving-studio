@@ -12,6 +12,10 @@
   height: 100vh;
   z-index: 3;
 
+  @include media-mx(1400) {
+    padding: rem(40) rem(30) rem(70) 4.25vw;
+  }
+
   @include media-mx(1200) {
     width: 100%;
     min-height: auto;
@@ -98,7 +102,16 @@
         }
       }
 
-      &__item {}
+      &__item {
+        &.current_page_item {
+          .menu__link {
+            &::before {
+              width: 5.50vw;
+            }
+          }
+
+        }
+      }
 
       &__link {
         color: #FFF;
@@ -118,6 +131,7 @@
 
           &::before {
             width: 5.50vw;
+
           }
         }
 
