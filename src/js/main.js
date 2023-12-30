@@ -17,6 +17,7 @@ import contacForm from './scripts/contactForm';
 import heroBlock from './scripts/heroBlock';
 import portfolioSection from './scripts/portfolioSection';
 import servicesSection from './scripts/servicesSection';
+import singlePage from './scripts/singlePage';
 // import Tabs from './modules/Tabs';
 // import Accordion from './modules/Accordion';
 
@@ -51,3 +52,5 @@ const services = document.querySelector('.services');
 if (services) {
 	servicesSection(services);
 }
+
+singlePage();

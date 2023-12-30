@@ -37,7 +37,7 @@
 </head>
 
 
-<body>
+<body <?php body_class( ) ?> >
   <div class="wrapper">
     <header class="header" data-fullscreen>
   <a href="<?php echo get_home_url(); ?>" class="header__logo logo">

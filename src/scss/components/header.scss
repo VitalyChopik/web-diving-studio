@@ -12,6 +12,10 @@
   height: 100vh;
   z-index: 3;
 
+  .single & {
+    background: #121213;
+  }
+
   @include media-mx(1400) {
     padding: rem(40) rem(30) rem(70) 4.25vw;
   }
@@ -26,6 +30,10 @@
     justify-content: center;
     height: auto;
     transition: all 0.5s !important;
+
+    .single & {
+      padding: rem(30) rem(20) rem(30);
+    }
 
     .touch & {
       min-height: auto;
