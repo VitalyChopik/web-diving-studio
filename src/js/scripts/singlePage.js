@@ -12,7 +12,7 @@ const singlePage = () => {
 
       const link = document.createElement('a');
       link.href = '#' + headingId;
-      link.textContent = heading.textContent;
+      link.textContent = `${index + 1}. ${heading.textContent}`;
 
       link.classList.add('single__navigation-link');
 
@@ -20,6 +20,9 @@ const singlePage = () => {
 
       tocLinks.appendChild(link);
     });
+    if (headings.length === 0) {
+      tocLinks.style.display = "none";
+    }
   }
 }
 export default singlePage;
