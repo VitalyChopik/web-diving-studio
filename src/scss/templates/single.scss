@@ -70,6 +70,13 @@
       line-height: 170%;
     }
 
+    h3 {
+      font-size: rem(18);
+      line-height: 170%;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
     p,
     li {
       font-size: rem(16);
@@ -89,7 +96,7 @@
 
     ul,
     ol {
-      margin: rem(40) 0 rem(20);
+      margin: rem(20) 0;
     }
 
     ul {
@@ -97,7 +104,8 @@
     }
 
     li {
-      margin-bottom: rem(10);
+      margin-bottom: rem(5);
+      list-style: inherit;
     }
   }
 
@@ -154,6 +162,11 @@
     .blog-page__post {
       min-height: rem(330);
       height: auto;
+      width: 50%;
+
+      @include media-mx(992) {
+        width: 100%;
+      }
     }
   }
 }
